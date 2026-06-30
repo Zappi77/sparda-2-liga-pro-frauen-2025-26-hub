@@ -62,11 +62,11 @@ function renderCards() {
     const highlightClass = team.reachRank === 1 ? "is-reach-leader" : team.name === "DSHS SnowTrex Köln" ? "is-home-team" : "";
     return `
       <article class="team-card reach-card ${highlightClass}">
-        <div class="card-top"><span class="team-logo"><img src="${leagueData.teamLogoUrls[team.name]}" alt="Logo ${team.name}" loading="lazy" width="72" height="72" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="monogram" hidden aria-hidden="true">${team.short}</span></span><span class="reach-rank" aria-label="Reichweitenrang ${team.reachRank}">#${team.reachRank}</span></div>
+        <div class="card-top"><span class="team-logo"><img src="${leagueData.teamLogoUrls[team.name]}" alt="Logo ${team.name}" loading="lazy" width="72" height="72"><span class="monogram" hidden aria-hidden="true">${team.short}</span></span><span class="reach-rank" aria-label="Reichweitenrang ${team.reachRank}">#${team.reachRank}</span></div>
         <h3>${team.name}</h3>
         <p class="standing-line">Tabelle ${team.rank}. · ${team.points} Punkte · ${team.wins} Siege</p>
         <div class="reach-primary"><span>Team-Aufrufe</span><strong>${formatter.format(team.youtubeViews)}</strong></div>
-        <div class="reach-bar" role="img" aria-label="${percentFormatter.format(team.barWidth)} Prozent des Spitzenwerts"><i style="width:${team.barWidth.toFixed(2)}%"></i></div>
+        <progress class="reach-bar" max="100" value="${team.barWidth.toFixed(2)}" aria-label="${percentFormatter.format(team.barWidth)} Prozent des Spitzenwerts">${percentFormatter.format(team.barWidth)} %</progress>
         <div class="card-stats reach-stats" aria-label="YouTube-Reichweitenkennzahlen">
           <span>Anteil Team-Aufrufe<strong>${percentFormatter.format(team.youtubeShare)} %</strong></span>
           <span>Ø je Beteiligung<strong>${formatter.format(Math.round(team.youtubeAverage))}</strong></span>
@@ -86,6 +86,14 @@ function renderCards() {
         </a>
       </article>`;
   }).join("");
+
+  teamGrid.querySelectorAll(".team-logo img").forEach(image => {
+    image.addEventListener("error", () => {
+      image.hidden = true;
+      const fallback = image.nextElementSibling;
+      if (fallback) fallback.hidden = false;
+    }, { once: true });
+  });
 }
 
 function renderReachSummary() {

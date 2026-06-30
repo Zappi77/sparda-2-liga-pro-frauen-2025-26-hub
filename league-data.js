@@ -1,5 +1,5 @@
 window.LEAGUE_DATA = {
-  "generated": "2026-06-29T23:34:20.605Z",
+  "generated": "2026-06-30T15:10:57.067Z",
   "sourceFiles": 15,
   "matches": [
     {
@@ -3081,6 +3081,23 @@ window.LEAGUE_DATA = {
     }
   ],
   "teamLogoUrls": {
+    "DSHS SnowTrex Köln": "assets/logos/dshs-snowtrex-koeln.png",
+    "BBSC Berlin": "assets/logos/bbsc-berlin.png",
+    "BayerVolleys Leverkusen": "assets/logos/bayervolleys-leverkusen.png",
+    "ESA Grimma Volleys": "assets/logos/esa-grimma-volleys.png",
+    "Eintracht Spontent Düsseldorf": "assets/logos/eintracht-spontent-duesseldorf.png",
+    "TV Hörde": "assets/logos/tv-hoerde.png",
+    "VfL Oythe": "assets/logos/vfl-oythe.png",
+    "NawaRo Straubing": "assets/logos/nawaro-straubing.png",
+    "Neuseenland-Volleys Markkleeberg": "assets/logos/neuseenland-volleys-markkleeberg.png",
+    "Rote Raben Vilsbiburg": "assets/logos/rote-raben-vilsbiburg.png",
+    "Sparkassen Wildcats Stralsund": "assets/logos/sparkassen-wildcats-stralsund.png",
+    "TV Dingolfing": "assets/logos/tv-dingolfing.png",
+    "TV Planegg-Krailling": "assets/logos/tv-planegg-krailling.png",
+    "TV Waldgirmes": "assets/logos/tv-waldgirmes.png",
+    "VCO Dresden": "assets/logos/vco-dresden.png"
+  },
+  "teamLogoSourceUrls": {
     "DSHS SnowTrex Köln": "https://www.volleyball-bundesliga.de/uploads/9d7057ef-e7c8-4d41-9c70-3efce1b653a3/DSHS+SnowTrex+K%C3%B6ln.png",
     "BBSC Berlin": "https://www.volleyball-bundesliga.de/uploads/131fc503-06e0-4f69-a475-84adf278b0d9/BBSC+Berlin.png",
     "BayerVolleys Leverkusen": "https://www.volleyball-bundesliga.de/uploads/bb11fe67-9f40-49ed-a42f-1e99316dadf9/Bayer+Leverkusen.png",

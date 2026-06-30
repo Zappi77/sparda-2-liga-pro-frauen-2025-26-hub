@@ -17,6 +17,8 @@ Responsive Saison- und Datenübersicht für die 15 Teams der Sparda 2. Liga Pro 
 - `styles.css` – responsives Design
 - `script.js` – Karten, Sortierung und Auswertungslogik
 - `league-data.js` – zentrale Spiel-, Tabellen-, Logo- und YouTube-Daten
+- `assets/fonts/` – lokal eingebundene Schriftdateien und OFL-Lizenzen
+- `assets/logos/` – lokal ausgelieferte, weboptimierte Vereinslogos; Ursprungslinks stehen in `league-data.js`
 
 Für eine lokale Vorschau genügt ein einfacher statischer Webserver, beispielsweise:
 
